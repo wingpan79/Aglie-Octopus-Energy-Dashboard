@@ -1,0 +1,223 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f7fa;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #2b4e72;
+    margin-top: 0;
+    border-bottom: 2px solid #e6eaef;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #3a6ea5;
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #0056b3;
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.price-table th, .price-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #e6eaef;
+}
+
+.price-table th {
+    background-color: #f0f5ff;
+    color: #2b4e72;
+}
+
+.price-table tr:nth-child(even) {
+    background-color: #f9fbff;
+}
+
+.price-row-cheap {
+    background-color: #e7ffed !important;
+}
+
+.price-row-expensive {
+    background-color: #fff0f0 !important;
+}
+
+.price-bar {
+    height: 20px;
+    background: linear-gradient(to right, #4CAF50, #FFEB3B, #F44336);
+    border-radius: 4px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.price-marker {
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: 40px;
+    background-color: #000;
+}
+
+.recommendations {
+    list-style-type: none;
+    padding: 0;
+}
+
+.recommendations li {
+    background-color: #e7f5ff;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.recommendations li::before {
+    content: "✓";
+    color: #2ecc71;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.appliance-rec {
+    background-color: #e0f7fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.appliance-rec h3 {
+    margin-top: 0;
+    color: #00796b;
+}
+
+.refresh-info {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#price-chart {
+    height: 300px;
+    width: 100%;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e6eaef;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.icon {
+    font-size: 1.2em;
+    margin-right: 5px;
+}
+
+.cheap-icon {
+    color: #2ecc71;
+}
+
+.expensive-icon {
+    color: #e74c3c;
+}
+
+/* Error handling styles */
+.error {
+    color: #e74c3c;
+    background-color: #fceaea;
+    padding: 10px;
+    border-radius: 4px;
+    border-left: 4px solid #e74c3c;
+}
+
+/* Loading animation */
+.loading::after {
+    content: "...";
+    animation: dots 1.5s steps(5, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% { content: "."; }
+    40% { content: ".."; }
+    60%, 100% { content: "..."; }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+    }
+    
+    .card {
+        background-color: #2a2a2a;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+    
+    h1, h2 {
+        color: #81a9d7;
+    }
+    
+    .price-table th {
+        background-color: #3a3a3a;
+        color: #c9e0ff;
+    }
+    
+    .price-table tr:nth-child(even) {
+        background-color: #333333;
+    }
+    
+    .price-row-cheap {
+        background-color: #1e3323 !important;
+    }
+    
+    .price-row-expensive {
+        background-color: #3d2222 !important;
+    }
+    
+    .recommendations li {
+        background-color: #253344;
+    }
+    
+    .appliance-rec {
+        background-color: #253b3f;
+    }
+}

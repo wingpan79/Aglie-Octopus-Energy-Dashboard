@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Octopus Energy Price Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Octopus Energy Price Dashboard</h1>
+    
+    <div class="container">
+        <div class="card">
+            <h2>Tomorrow's Price Summary</h2>
+            <div id="price-summary">
+                <p><span class="icon cheap-icon">💰</span> <strong>Cheapest price:</strong> <span id="cheapest-price">Loading...</span> at <span id="cheapest-time">Loading...</span></p>
+                <p><span class="icon expensive-icon">⚠️</span> <strong>Highest price:</strong> <span id="highest-price">Loading...</span> at <span id="highest-time">Loading...</span></p>
+                <p><strong>Average price:</strong> <span id="average-price">Loading...</span></p>
+                
+                <div class="price-bar">
+                    <div id="cheapest-marker" class="price-marker" style="left: 10%"></div>
+                    <div id="average-marker" class="price-marker" style="left: 50%"></div>
+                    <div id="highest-marker" class="price-marker" style="left: 90%"></div>
+                </div>
+            </div>
+            
+            <div id="chart-container">
+                <canvas id="price-chart"></canvas>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Recommended Energy Usage Periods</h2>
+            <ul id="time-recommendations" class="recommendations">
+                <li>Loading recommendations...</li>
+            </ul>
+            
+            <div class="appliance-rec">
+                <h3>Appliance Recommendations</h3>
+                <div id="appliance-recommendations">
+                    <p><strong>Washing Machine/Dryer:</strong> <span id="washer-recommendation">Loading...</span></p>
+                    <p><strong>EV Charging:</strong> <span id="ev-recommendation">Loading...</span></p>
+                    <p><strong>Dishwasher:</strong> <span id="dishwasher-recommendation">Loading...</span></p>
+                    <p><strong>High-Energy Activities:</strong> <span id="high-energy-recommendation">Loading...</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <h2>Detailed Price Schedule</h2>
+        <table class="price-table" id="price-table">
+            <thead>
+                <tr>
+                    <th>Time Period</th>
+                    <th>Price (p/kWh)</th>
+                    <th>Usage Recommendation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="3" style="text-align: center">Loading price data...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <p class="refresh-info">Data last updated: <span id="update-time">Loading...</span></p>
+    
+    <div class="footer">
+        <p>Data sourced from Octopus Energy API - Not affiliated with Octopus Energy Ltd</p>
+        <p>Created with ❤️ to help reduce energy costs and carbon footprint</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
