@@ -2,7 +2,7 @@
 
 A simple, interactive dashboard that displays tomorrow's electricity prices for the Octopus Energy Agile tariff, helping you identify the cheapest and most expensive times to use electricity.
 
-![Dashboard Preview](https://wingpan79.github.io/Aglie-Octopus-Energy-Dashboard/)
+https://wingpan79.github.io/Aglie-Octopus-Energy-Dashboard/
 
 ## How It Works
 
