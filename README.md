@@ -52,6 +52,7 @@ Feel free to fork this project and enhance it! Some ideas for improvements:
 - Include historical price comparison
 - Add energy usage planning tools
 - Implement local storage to remember preferences
+- Email notification
 
 ## License
 
